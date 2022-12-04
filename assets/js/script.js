@@ -8,12 +8,12 @@ function exibeMenu() {
     const url = new URLSearchParams(window.location.search)
     let acesso = url.get("val")
 
-    if(acesso != 0){
-        const elements =  document.getElementsByClassName('item +18')
+    if (acesso != 0) {
+        const elements = document.getElementsByClassName('item +18')
 
         while (elements.length > 0) elements[0].remove();
-        }
     }
+}
 
 
 function comprar(idCompra) {
@@ -21,16 +21,15 @@ function comprar(idCompra) {
     switch (idCompra) {
         case 00:
             valor = document.getElementById('valor00').innerHTML
-            window.location.href = 'checkout.html?valchk='+valor
+            window.location.href = 'checkout.html?valchk=' + valor
             break;
         case 01:
             valor = document.getElementById('valor01').innerHTML
-            window.location.href = 'checkout.html?valchk='+valor
+            window.location.href = 'checkout.html?valchk=' + valor
             break;
         case 02:
             valor = document.getElementById('valor02').innerHTML
-            window.location.href = 'checkout.html?valchk='+valor
-            
+            window.location.href = 'checkout.html?valchk=' + valor
             break;
 
     }
@@ -38,11 +37,10 @@ function comprar(idCompra) {
 }
 
 
-function checkout(){
+function checkout() {
     const url = new URLSearchParams(window.location.search)
     let valorck = url.get('valchk')
     document.getElementById('chkvalor').innerHTML = valorck
 
-
-   
 }
+
